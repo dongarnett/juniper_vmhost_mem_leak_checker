@@ -11,7 +11,7 @@ from collections import defaultdict
 
 
 
-'''Get FPC values from device'''
+'''Get VMHost system memory values from device'''
 def get_system_proc_memory(dut_host):
     '''Command sets for device configuration'''
     #command_set_1 = [f'show system memory | match "/" | except ":" | no-more']
@@ -42,7 +42,6 @@ def get_proc_mem_use(inputs):
     proc_id_dict = {}
     proc_res_mem_dict = {}
     i = 0
-
 
     init_proc_name = re.findall(r'\)\s+\/[a-z]+\/\S+', inputs, re.MULTILINE)
     init_proc_pid = re.findall(r'^\s+[0-9]+', inputs, re.MULTILINE)
