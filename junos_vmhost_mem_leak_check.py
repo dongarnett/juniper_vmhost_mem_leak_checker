@@ -65,12 +65,6 @@ def main():
     post_trig_list_proc_names = list(post_trig_dict_proc_names.values())
     post_trig_list_proc_id = list(post_trig_dict_proc_id.values())
     post_trig_list_proc_res_mem = list(post_trig_dict_proc_res_mem.values())
-    # print(pre_trig_list_proc_names)
-    # print(pre_trig_list_proc_id)
-    # print(pre_trig_list_proc_res_mem)
-    # print(post_trig_list_proc_names)
-    # print(post_trig_list_proc_id)
-    # print(post_trig_list_proc_res_mem)
 
     # Compare pre and post-trigger memory usage values
     if len(pre_trig_list_proc_res_mem) == len(post_trig_list_proc_res_mem):
