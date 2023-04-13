@@ -14,7 +14,8 @@ from collections import defaultdict
 '''Get FPC values from device'''
 def get_system_proc_memory(dut_host):
     '''Command sets for device configuration'''
-    command_set_1 = [f'show system memory | match "/" | except ":"']
+    #command_set_1 = [f'show system memory | match "/" | except ":" | no-more']
+    command_set_1 = [f'show system memory | match / | except : | no-more']
     '''Create handle'''
     dut_host_session = create_handle_quiet(dut_host)
     dut_host_terminal = dut_host_session.invoke_shell()
@@ -23,14 +24,14 @@ def get_system_proc_memory(dut_host):
         print(f'Sending command: {command}\n')
         try:
             dut_host_terminal.send(f'{command}\n')
-            time.sleep(1)
+            time.sleep(3)
         except:
             print(f"An error occurred.")
-        output = dut_host_terminal.recv(1000).decode('utf-8')
+            time.sleep(1)
+        output = dut_host_terminal.recv(100000).decode('utf-8')
     output_recv = output.split('\r\n')
     dut_host_terminal.send('exit\n')
     return output
-    time.sleep(10)
 
 
 '''Parse output from memory data retrieved'''

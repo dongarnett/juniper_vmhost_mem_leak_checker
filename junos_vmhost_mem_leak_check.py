@@ -45,14 +45,12 @@ def main():
     #########################################
     ###### INSERT TRIGGER ACTIONS HERE#######
     #########################################
-    time.sleep(5)
+    time.sleep(30)
     #########################################
     #########################################
     #########################################
 
     try:
-        pre_inputs = get_system_proc_memory(dut_host)
-        #print(pre_inputs)
         post_inputs = get_system_proc_memory(dut_host)
         #print(post_inputs)
     except:
