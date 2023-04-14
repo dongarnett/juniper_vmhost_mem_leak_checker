@@ -22,7 +22,7 @@ Juniper devices running standard and EVO release are not supported with this too
 
 
 Usage:
-you@your_computer# python3 junos_vmhost_mem_leak_check.py <ip-address> <username> <password> <interval-count>
+you@your_computer# python3 junos_vmhost_mem_leak_check.py <ip-address> <username> <password>
 
 
 Example Run:
